@@ -1,0 +1,35 @@
+name: Zap Security Test
+
+on: [push]
+
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+          - name: ZAP Scan
+            uses: zaproxy/action-api-scan@v0.5.0
+            with:
+              target: 'https://www.zaproxy.org/'
+              allow_issue_writing: false
+           # env:
+            #  ARTIFACT_NAME: Zap
+                            
+       #   - name: w3 School
+        #    uses: zaproxy/action-api-scan@v0.5.0
+         #   with:
+          #    target: 'https://www.w3schools.com/java/default.asp'
+           #   allow_issue_writing: false              
+            #env:
+             # ARTIFACT_NAME: w3
+
+        #  - name: Combine Reports
+         #   run: |
+          #    mkdir combined_report
+           #   cp -r ${{env.ARTIFACT_NAME}}/* combined_report/
+
+       #   - name: Upload combined report
+        #    uses: actions/upload-artifact@v2
+         #   with:
+          #      name: combined-report
+           #     path: combined-report

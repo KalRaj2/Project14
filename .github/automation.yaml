@@ -1,0 +1,27 @@
+name: api automation
+
+on:
+  workflow_dispatch
+
+jobs:
+   Name: api automation
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up python
+        uses: actions/setup-python@v5
+
+      - name: Install locust
+        uses: make install-locust
+
+      - name: run api-automation
+        uses: make run-api-automation
+      
+      - name: artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: report
+          path: path.html

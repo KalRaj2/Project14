@@ -1,0 +1,15 @@
+LOCUST_USERS = 1
+LOCUST_RUNTIME = 30
+LOCUST_ITERATION=2
+
+.PHONY: instal-locust
+install-locust:
+	@echo "-Installing locust"
+	pip instal locust
+	pip install locust-plugins
+	@echo "-Done"
+
+.PHONY: run-api-automation
+run-api-automation:
+	@echo "-running script..."
+	locust -f ==headless - u $(LOCUST_USERS) -t$(LOCUST_RUNTIME)s -r $(LOCUST_ITERATION) --html report.html
