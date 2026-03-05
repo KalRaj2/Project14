@@ -1,2 +1,2 @@
-console.log('Hello, World! How are they doing?');
-console.log('Hello, Worlds!');
+console.log('Bye, World! How are they doing?');
+console.log('Bye, Worlds!');
