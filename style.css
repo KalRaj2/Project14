@@ -1,0 +1,8 @@
+p {
+  color: blue; /* Changes the text color to blue */
+  font-size: 16px; /* Sets the font size */
+  background-color: yellow; /* Adds a yellow background */
+  border: 2px solid powderblue; /* Adds a border (width, style, color) */
+  padding: 15px; /* Adds space between the text and the border */
+  margin: 20px; /* Adds space outside the border */
+}
