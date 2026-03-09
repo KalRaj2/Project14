@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Rajesh IDE</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
+
+<script src="https://unpkg.com/monaco-editor@0.34.1/min/vs/loader.js"></script>
+
+</head>
+
+<body>
+
+<div class="topbar">
+Rajesh IDE
+</div>
+
+<div class="container">
+
+<div class="explorer">
+<h3>Files</h3>
+<ul id="filelist"></ul>
+</div>
+
+<div class="editor-area">
+<div id="editor"></div>
+<div id="terminal"></div>
+</div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+
+<script src="editor.js"></script>
+<script src="explorer.js"></script>
+<script src="terminal.js"></script>
+
+</body>
+
+</html>
