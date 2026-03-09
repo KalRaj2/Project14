@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css"/>
 
 <script src="https://unpkg.com/monaco-editor@0.34.1/min/vs/loader.js"></script>
 
@@ -16,30 +16,78 @@
 <body>
 
 <div class="topbar">
+
 Rajesh IDE
+
+<button onclick="saveFile()">Save</button>
+
+<button onclick="runCode()">Run</button>
+
 </div>
 
 <div class="container">
 
 <div class="explorer">
-<h3>Files</h3>
+
+<h3>Project</h3>
+
 <ul id="filelist"></ul>
+
+<div class="gitpanel">
+
+<h3>Source Control</h3>
+
+<button onclick="gitStatus()">Refresh</button>
+
+<input id="commitmsg" placeholder="Commit message">
+
+<button onclick="gitCommit()">Commit</button>
+
+<pre id="gitoutput"></pre>
+
+</div>
+
+</div>
+
+<h3>Files</h3>
+
+<ul id="filelist"></ul>
+
 </div>
 
 <div class="editor-area">
+
 <div id="editor"></div>
+
 <div id="terminal"></div>
+
+<div class="ai-panel">
+
+<h3>AI Assistant</h3>
+
+<textarea id="aiInput" placeholder="Ask AI something..."></textarea>
+
+<button onclick="askAI()">Ask</button>
+
+<pre id="aiOutput"></pre>
+
+</div>
+
 </div>
 
 </div>
 
 <script src="/socket.io/socket.io.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
 
 <script src="editor.js"></script>
 <script src="explorer.js"></script>
+<script src="tabs.js"></script>
 <script src="terminal.js"></script>
+<script src="git.js"></script>
+<script src="ai.js"></script>
+<script src="run.js"></script>
 
 </body>
-
 </html>
